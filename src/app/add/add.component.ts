@@ -11,9 +11,6 @@ import { Geocache } from '../geocache.model';
 })
 
 export class AddComponent implements OnInit {
-  geocacheLocation: any[]=null;
-  result: any = null;
-  search: string = null;
 
   constructor(private addService: AddService, private locationService: LocationService) { }
 
