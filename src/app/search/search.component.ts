@@ -10,7 +10,7 @@ import { apiKey } from '../api-keys';
   styleUrls: ['./search.component.css'],
   providers: [ LocationService ]
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit {
   geocaches: any[]=null;
   // noCaches: boolean=false;
 
@@ -23,12 +23,10 @@ export class SearchComponent {
     // this.noCaches = false;
     this.locations.getPhysicalAddress(lat, lng).subscribe(response =>{
       this.geocaches = response.json()
+      console.log(lat);
       console.log(this.geocaches);
       console.log(apiKey.geoKey);
     });
   }
-
-
-
 
 }

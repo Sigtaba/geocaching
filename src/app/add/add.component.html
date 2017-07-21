@@ -1,0 +1,17 @@
+<h1>Add Geocaches</h1>
+<form>
+  <div class="form-group">
+    <label for="lat">Latitude</label>
+    <input type="number" #lat>
+  </div>
+  <div class="form-group">
+    <label for="lng">Longitude</label>
+    <input type="number" #lng>
+  </div>
+  <div class="form-group">
+    <label for="creator">Creator</label>
+    <input type="string" #creator>
+  </div>
+  <button (click)="submitForm(lat.value, lng.value, creator.value)">Submit</button>
+</form>
+<h1>testing</h1>
