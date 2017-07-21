@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { LocationService } from '../location.service';
-import { apiKey } from '../api-keys';
+import { geoKey } from '../api-keys';
 
 @Component({
   selector: 'app-search',
@@ -25,7 +25,6 @@ export class SearchComponent implements OnInit {
       this.geocaches = response.json()
       console.log(lat);
       console.log(this.geocaches);
-      console.log(apiKey.geoKey);
     });
   }
 

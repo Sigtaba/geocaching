@@ -1,6 +1,4 @@
-export var apiKey = {
-  geoKey: "AIzaSyDVdHrkxkr9T9iAgOkQ4U2gw1pLetGIyWY"
-};
+export const geoKey = "AIzaSyDVdHrkxkr9T9iAgOkQ4U2gw1pLetGIyWY";
 
 export var masterFirebaseConfig = {
   apiKey: "AIzaSyC9fTpHS7pphSz2XxGxugDoZRoV3S3b55A",
