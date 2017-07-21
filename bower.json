@@ -1,0 +1,20 @@
+{
+  "name": "geocaching",
+  "description": "Uses google API to locate geocache locations",
+  "main": "",
+  "authors": [
+    "Isabella Abatgis <abatgis@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
