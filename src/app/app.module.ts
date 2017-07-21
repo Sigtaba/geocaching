@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { geoKey } from './api-keys';
+import { apiKey } from './api-keys';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';

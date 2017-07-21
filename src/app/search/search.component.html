@@ -1,3 +1,22 @@
-<p>
-  search is here helloooooo
-</p>
+<h1>Search for Geocaches</h1>
+<form>
+  <div class="form-group">
+    <label for="lat">Latitude</label>
+    <input type="number" #lat>
+  </div>
+  <div class="form-group">
+    <label for="lng">Longitude</label>
+    <input type="number" #lng>
+  </div>
+  <button (click)="getLocations(lat.value, lng.value)">Submit</button>
+</form>
+<h1>testing</h1>
+
+<!-- <app-photos-list [childGeocaches]="geocaches"></app-photos-list> -->
+
+<!-- <div *ngIf="photos && !noPhotos">
+  <app-photos-list [childPhotos]="photos"></app-photos-list>
+</div>
+<div *ngIf="noPhotos">
+    <h3>There were no photos taken on {{roverDate.value}} by the {{roverCamera.value}} camera.</h3>
+</div> -->
