@@ -11,16 +11,20 @@ import { Geocache } from '../geocache.model';
 })
 export class ReverseAddComponent implements OnInit {
 
-  constructor() { }
+  constructor(private addService: AddService) { }
 
   ngOnInit() {
   }
 
-  // getCoordinates(address: string): void {
-  //     this.locationService.getLatLng(address).subscribe(response => {
-  //       this.search = `address: ${address}`;
-  //       this.result = response.json().results[0].geometry.location;
-  //     });
-  //   }
+  submitForm(address: string) {
+    var lat = null;
+    var lng = null;
+    var creator = null;
+
+    // var address = number.value; 
+    //
+    // var newGeocache: Geocache = new Geocache(lat, lng, creator, address);
+    // this.addService.addGeocache(newGeocache);
+  }
 
 }

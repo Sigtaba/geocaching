@@ -20,15 +20,9 @@ export class AddComponent implements OnInit {
   ngOnInit() {
   }
 
-  getLatLongFromForm(lat: string, lng: string) {
-    this.addService.getPhysicalAddress(lat, lng).subscribe
-      (response => {
-      this.geocacheLocation = response.json().results[0].formatted_address;
-    })
-  }
-
-  submitForm(lat: string, lng: string, creator: string) {
-    var newGeocache: Geocache = new Geocache(lat, lng, creator);
+  submitForm(lat: string, lng: string, creator: string, address: string) {
+    address = null;
+    var newGeocache: Geocache = new Geocache(lat, lng, creator, address);
     this.addService.addGeocache(newGeocache);
   }
 }
