@@ -29,10 +29,16 @@ export class AddComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveCoordinates(lat: string, lng: string, creator: string, address: string) {
-    address = "null";
-    var newGeocache: Geocache = new Geocache(lat, lng, creator, address);
-    this.addService.addGeocache(newGeocache);
+  // saveCoordinates(lat: string, lng: string, creator: string, address: string) {
+  //   address = "null";
+  //   var newGeocache: Geocache = new Geocache(lat, lng, creator, address);
+  //   this.addService.addGeocache(newGeocache);
+  //   alert("Coordinates saved")
+  // }
+
+  saveCoordinates2(lat: string, lng: string, creator: string) {
+    this.addService.getCoordinates(lat, lng, creator);
     alert("Coordinates saved")
   }
+
 }

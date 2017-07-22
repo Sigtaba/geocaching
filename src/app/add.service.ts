@@ -21,22 +21,34 @@ export class AddService {
     this.geocaches.push(newGeocache);
   }
 
-  getPhysicalAddress(lat: string, lng: string){
-    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key="+geoKey);
-  }
-
-  getLatLng(address: string) {
-    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +address+ "&api_key=" +geoKey)
-  }
+  // getPhysicalAddress(lat: string, lng: string){
+  //   return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key="+geoKey);
+  // }
+  //
+  // getLatLng(address: string, creator: string) {
+  //   return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +address+ "&api_key=" +geoKey)
+  // }
 
   getAddress(address: string, creator: string) {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +address+ "&api_key=" +geoKey)
     .subscribe(response => {
-      let foundGeocache: Geocache;
+      let jsonGeocache: Geocache;
       for(let cache of response.json().results) {
         var creator = null;
-        foundGeocache = new Geocache(cache.geometry.location.lat, cache.geometry.location.lng, creator, cache.formatted_address);
-        this.addGeocache(foundGeocache);
+        jsonGeocache = new Geocache(cache.geometry.location.lat, cache.geometry.location.lng, creator, cache.formatted_address);
+        this.addGeocache(jsonGeocache);
+      }
+    });
+  }
+
+  getCoordinates(lat: string, lng: string, creator: string) {
+    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key="+geoKey)
+    .subscribe(response => {
+      let jsonGeocache: Geocache;
+      for(let cache of response.json().results) {
+        var creator = null;
+        jsonGeocache = new Geocache(cache.geometry.location.lat, cache.geometry.location.lng, creator, cache.formatted_address);
+        this.addGeocache(jsonGeocache);
       }
     });
   }
