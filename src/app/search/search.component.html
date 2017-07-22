@@ -1,0 +1,7 @@
+<p>
+  Look at saved Geocaches
+</p>
+
+<div *ngFor="let geocache of listedGeocaches | async" (click)="moreInfo(geocache)">
+    <h5><em>{{geocache.address}}</em> by {{geocache.creator}}</h5>
+</div>

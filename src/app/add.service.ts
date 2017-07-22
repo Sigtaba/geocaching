@@ -27,7 +27,6 @@ export class AddService {
       var lat  = response.json().results[0].geometry.location.lat;
       var lng =  response.json().results[0].geometry.location.lng;
       var address = response.json().results[0].formatted_address;
-
       var newGeocache: Geocache = new Geocache(lat, lng, creator, address);
       this.addGeocache(newGeocache);
     });
@@ -39,7 +38,6 @@ export class AddService {
       var lat  = response.json().results[0].geometry.location.lat;
       var lng =  response.json().results[0].geometry.location.lng;
       var address = response.json().results[0].formatted_address;
-
       var newGeocache: Geocache = new Geocache(lat, lng, creator, address);
       this.addGeocache(newGeocache);
     });

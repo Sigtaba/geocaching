@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { AddComponent } from './add/add.component';
+import { SearchComponent } from './search/search.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,7 +23,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    AddComponent
+    AddComponent,
+    SearchComponent
   ],
   imports: [
     RouterModule,
