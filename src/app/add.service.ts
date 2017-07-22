@@ -24,22 +24,24 @@ export class AddService {
   getAddress(address: string, creator: string) {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +address+ "&api_key=" +geoKey)
     .subscribe(response => {
-      let jsonGeocache: Geocache;
-      for(let cache of response.json().results) {
-        jsonGeocache = new Geocache(cache.geometry.location.lat, cache.geometry.location.lng, creator, cache.formatted_address);
-        this.addGeocache(jsonGeocache);
-      }
+      var lat  = response.json().results[0].geometry.location.lat;
+      var lng =  response.json().results[0].geometry.location.lng;
+      var address = response.json().results[0].formatted_address;
+
+      var newGeocache: Geocache = new Geocache(lat, lng, creator, address);
+      this.addGeocache(newGeocache);
     });
   }
 
   getCoordinates(lat: string, lng: string, creator: string) {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key="+geoKey)
     .subscribe(response => {
-      let jsonGeocache: Geocache;
-      for(let cache of response.json().results) {
-        jsonGeocache = new Geocache(cache.geometry.location.lat, cache.geometry.location.lng, creator, cache.formatted_address);
-        this.addGeocache(jsonGeocache);
-      }
+      var lat  = response.json().results[0].geometry.location.lat;
+      var lng =  response.json().results[0].geometry.location.lng;
+      var address = response.json().results[0].formatted_address;
+
+      var newGeocache: Geocache = new Geocache(lat, lng, creator, address);
+      this.addGeocache(newGeocache);
     });
   }
 
