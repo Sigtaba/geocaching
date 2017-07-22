@@ -34,7 +34,6 @@ export class AddService {
     .subscribe(response => {
       let jsonGeocache: Geocache;
       for(let cache of response.json().results) {
-        var creator = null;
         jsonGeocache = new Geocache(cache.geometry.location.lat, cache.geometry.location.lng, creator, cache.formatted_address);
         this.addGeocache(jsonGeocache);
       }
@@ -46,7 +45,6 @@ export class AddService {
     .subscribe(response => {
       let jsonGeocache: Geocache;
       for(let cache of response.json().results) {
-        var creator = null;
         jsonGeocache = new Geocache(cache.geometry.location.lat, cache.geometry.location.lng, creator, cache.formatted_address);
         this.addGeocache(jsonGeocache);
       }
