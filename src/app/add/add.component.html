@@ -1,4 +1,4 @@
-<h1>Add Geocaches</h1>
+<h1>Add By Coordinates</h1>
 <form>
   <div class="form-group">
     <label for="lat">Latitude</label>
@@ -12,6 +12,17 @@
     <label for="creator">Creator</label>
     <input type="string" #creator>
   </div>
-  <button (click)="submitForm(lat.value, lng.value, creator.value)">Submit</button>
+  <button (click)="saveCoordinates(lat.value, lng.value, creator.value)">Submit Coordinates</button>
 </form>
-<h1>testing</h1>
+<h1>Add by Address</h1>
+<form>
+  <div class="form-group">
+    <label for="address">Add Address</label>
+    <input type="address" #address>
+  </div>
+  <div class="form-group">
+    <label for="creator">Creator</label>
+    <input type="string" #creator2>
+  </div>
+  <button (click)="saveAddress(address.value)">Save Geocache Info</button>
+</form>

@@ -9,10 +9,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
 import { routing } from './app.routing';
 import { AddComponent } from './add/add.component';
-import { ReverseAddComponent } from './reverse-add/reverse-add.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,9 +22,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent,
-    AddComponent,
-    ReverseAddComponent
+    AddComponent
   ],
   imports: [
     RouterModule,
