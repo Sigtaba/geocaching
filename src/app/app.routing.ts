@@ -2,6 +2,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddComponent } from './add/add.component';
 import { SearchComponent } from './search/search.component';
+import { InfoComponent } from './info/info.component';
 
 const appRoutes: Routes = [
   {
@@ -11,6 +12,10 @@ const appRoutes: Routes = [
   {
     path: 'search',
     component: SearchComponent
+  },
+  {
+    path: 'geocaches/:id',
+    component: InfoComponent
   }
 ];
 

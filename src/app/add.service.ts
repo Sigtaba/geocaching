@@ -43,4 +43,8 @@ export class AddService {
     });
   }
 
+  getDetailById(detailId: string) {
+    return this.af.object('geocaches/' + detailId);
+  }
+  
 }

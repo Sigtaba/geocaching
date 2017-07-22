@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { AddComponent } from './add/add.component';
 import { SearchComponent } from './search/search.component';
+import { InfoComponent } from './info/info.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +25,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     AddComponent,
-    SearchComponent
+    SearchComponent,
+    InfoComponent
   ],
   imports: [
     RouterModule,

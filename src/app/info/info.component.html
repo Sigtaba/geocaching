@@ -1,0 +1,10 @@
+<div class="container nudge" style="margin-top: 100px">
+  <div class="panel">
+    <strong><a routerLink="/search">&larr; Go back to list</a></strong>
+    <h2>Information about this geocache</h2>
+
+    <p><strong>Name of cache creator:</strong> {{(detailToDisplay | async)?.creator}}</p>
+    <p><strong>Latitude:</strong> {{(detailToDisplay | async)?.lat}}</p>
+    <p><strong>Longitude:</strong> {{(detailToDisplay | async)?.lng}}</p>
+    <p><strong>Address:</strong> {{(detailToDisplay | async)?.address}}</p>
+</div>
