@@ -22,8 +22,8 @@ export class AddComponent implements OnInit {
   // }
 
   saveAddress(address: string, creator: string){
-    this.addService.getAddress(address);
-    alert("The following address, " + address + " ,has been saved to the database.")
+    this.addService.getAddress(address, creator);
+    alert("address saved")
   }
 
   ngOnInit() {
@@ -33,5 +33,6 @@ export class AddComponent implements OnInit {
     address = "null";
     var newGeocache: Geocache = new Geocache(lat, lng, creator, address);
     this.addService.addGeocache(newGeocache);
+    alert("Coordinates saved")
   }
 }

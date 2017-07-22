@@ -29,7 +29,7 @@ export class AddService {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +address+ "&api_key=" +geoKey)
   }
 
-  getAddress(address: string) {
+  getAddress(address: string, creator: string) {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +address+ "&api_key=" +geoKey)
     .subscribe(response => {
       let foundGeocache: Geocache;
