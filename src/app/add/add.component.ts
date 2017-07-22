@@ -17,19 +17,17 @@ export class AddComponent implements OnInit {
 
   constructor(private addService: AddService) { }
 
-  saveAddress(address: string, creator: string){
-    var creator = "Tom";
+  saveAddress(address: string, creator: string,){
     this.addService.getAddress(address, creator);
-    alert("address saved")
+    alert("hi" + creator + "address saved")
   }
 
   ngOnInit() {
   }
 
   saveCoordinates(lat: string, lng: string, creator: string) {
-    var creator = "Tim";
     this.addService.getCoordinates(lat, lng, creator);
-    alert("Coordinates saved")
+    alert("hi" + creator + "Coordinates saved")
   }
 
 }

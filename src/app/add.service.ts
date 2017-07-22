@@ -21,14 +21,6 @@ export class AddService {
     this.geocaches.push(newGeocache);
   }
 
-  // getPhysicalAddress(lat: string, lng: string){
-  //   return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key="+geoKey);
-  // }
-  //
-  // getLatLng(address: string, creator: string) {
-  //   return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +address+ "&api_key=" +geoKey)
-  // }
-
   getAddress(address: string, creator: string) {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +address+ "&api_key=" +geoKey)
     .subscribe(response => {
