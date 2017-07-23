@@ -19,7 +19,6 @@ export class AddComponent implements OnInit {
 
   saveAddress(address: string, creator: string,){
     this.addService.getAddress(address, creator);
-    alert("hi" + creator + "address saved")
   }
 
   ngOnInit() {
@@ -27,7 +26,6 @@ export class AddComponent implements OnInit {
 
   saveCoordinates(lat: string, lng: string, creator: string) {
     this.addService.getCoordinates(lat, lng, creator);
-    alert("hi" + creator + "Coordinates saved")
   }
 
 }
