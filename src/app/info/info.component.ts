@@ -13,9 +13,9 @@ import { SearchComponent } from '../search/search.component';
   providers: [AddService]
 })
 export class InfoComponent implements OnInit {
-  detailId: string;
+  key: string;
   geocaches: any[];
-  detailToDisplay: any;
+  data: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,10 +28,10 @@ export class InfoComponent implements OnInit {
     });
 
     this.route.params.forEach((urlParameters) => {
-      this.detailId = urlParameters['id'];
+      this.key = urlParameters['id'];
     });
 
-    this.detailToDisplay = this.addService.getDetailById(this.detailId);
+    this.data = this.addService.getInfo(this.key);
 
   }
 }
